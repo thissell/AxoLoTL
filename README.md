@@ -21,10 +21,9 @@ sequential data, with entailment properties of the logic provided beforehand. Th
 In all circumstances, the LLM can not generalize to problem sizes above that which was seen in the training data.
 
 AxoLoTL attempts to solve this by leveraging the graph topology and spectral features of
-the problem's syntax tree. By using graph convolution and cross-talk attention between the shape (encoded as the graph's 
-Laplacian Eigendecomposition) and node features of the syntax tree, AxoLoTL lets the shape and information of the problem 
-not only speak to eachother, but also be malleable across encoding layers, hopefully allowing identification between 
-subtrees of variable size.
+the problem's syntax tree. AxoLoTL uses graph convolution and cross-talk attention between the shape and node 
+features of the syntax tree. This allows the problem's shape and information to not only speak between eachother, 
+but also be malleable across encoding layers, hopefully allowing identification between subtrees of variable size.
 
 
 ## Getting Started

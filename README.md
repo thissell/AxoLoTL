@@ -13,17 +13,18 @@ Authors:
 
 ## Introduction
 
-AxoLoTL is an attempt at encoding representations of learned, generalizable, logic through examples of entailment 
+AxoLoTL is an attempt at encoding representations of learned, generalizable logic through examples of entailment 
 between syntax trees. 
 
 Other works which try to train logical understanding into LLMs often use Bidirectional Transformer models on 
 sequential data, with entailment properties of the logic provided beforehand. This has seen highly limited results. 
 In all circumstances, the LLM can not generalize to problem sizes above that which was seen in the training data.
 
-AxoLoTL attempts to solve this by leveraging the graph topology and spectral features of
-the problem's syntax tree. By using graph convolution and cross-talk attention between the shape (encoded as the graph's 
-Laplacian Eigendecomposition) and node features of the syntax tree, AxoLoTL lets the shape and information of the problem 
-not only speak to eachother, and also be malleable across encoding layers.
+AxoLoTL attempts to solve this by leveraging the graph topology and spectral features of the problem's syntax tree. 
+Instead of being given given the properties of objects, AxoLoTL learns by example, utilizing graph convolution and 
+cross-talk attention between the shape and node features of the problem's syntax tree. This allows the problem's 
+shape and information to not only speak between eachother, but also be malleable across encoding layers, 
+hopefully allowing identification between subtrees of variable size.
 
 
 ## Getting Started
@@ -94,8 +95,8 @@ Our baseline model will be a BERT model with the same layer size, embedding dime
 pre-trained using a linearized AxoLogic dataset, which has parentheses added for syntactical accuracy.
 
 If we find significantly better performance with AxoLoTL on the generalization set than BERT, and also find 
-significantly similar F1 scores between validation and generalization, we may say that AxoLoTL is
-able to generalize learned logical rules, and we have succeeded at our goal. :robot:
+significant similarity between AxoLoTL's validation and generalization scores, we may say that AxoLoTL is
+better able to generalize learned logical rules, and we have succeeded at our goal. :robot:
 
 
 ## TODO:

@@ -25,7 +25,6 @@ the problem's syntax tree. By using graph convolution and cross-talk attention b
 Laplacian Eigendecomposition) and node features of the syntax tree, AxoLoTL lets the shape and information of the problem 
 not only speak to eachother, and also be malleable across encoding layers.
 
----
 
 ## Getting Started
 ### Installation
@@ -56,7 +55,6 @@ files, including entailment labeled and (masked index, masked token) pairs.
 To generate your own AxoLogic dataset, use the `/dataset/data_generator.py` script. To view the data in the generated
 folder, use the `/dataset/data_explorer.py` script.
 
----
 
 ## Architecture
 
@@ -72,7 +70,6 @@ attention. Two linear layers separate the concatenated attention back into the t
 pieces are fed through dual feed-forward residual layers like a common Transformer. This is a process we are calling **cross-talk**. 
 Graph convolution is then performed as usual with residual connections.
 
----
 
 ## Methodology
 
@@ -100,7 +97,6 @@ If we find significantly better performance with AxoLoTL on the generalization s
 significantly similar F1 scores between validation and generalization, we may say that AxoLoTL is
 able to generalize learned logical rules, and we have succeeded at our goal. :robot:
 
----
 
 ## TODO:
 - ### AxoLoTL Model

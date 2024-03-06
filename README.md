@@ -94,8 +94,8 @@ Our baseline model will be a BERT model with the same layer size, embedding dime
 pre-trained using a linearized AxoLogic dataset, which has parentheses added for syntactical accuracy.
 
 If we find significantly better performance with AxoLoTL on the generalization set than BERT, and also find 
-significantly similar F1 scores between validation and generalization, we may say that AxoLoTL is
-able to generalize learned logical rules, and we have succeeded at our goal. :robot:
+significant similarity between AxoLoTL's validation and generalization scores, we may say that AxoLoTL is
+better able to generalize learned logical rules, and we have succeeded at our goal. :robot:
 
 
 ## TODO:

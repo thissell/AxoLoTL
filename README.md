@@ -1,6 +1,6 @@
 <p align="center">
 
-<img src="brand/axolotl.png" height="200px" width="250px"/>
+<img src="brand/axolotl.png" height="160px" width="200px"/>
 </p>
 
 # AxoLoTL: Axiomatic Language-Tree Learning

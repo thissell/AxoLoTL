@@ -22,9 +22,9 @@ In all circumstances, the LLM can not generalize to problem sizes above that whi
 
 AxoLoTL attempts to solve this by leveraging the graph topology and spectral features of the problem's syntax tree. 
 Instead of being given given the properties of objects, AxoLoTL learns by example, utilizing graph convolution and 
-cross-talk attention between the shape and node features of the syntax tree. This allows the problem's shape and 
-information to not only speak between eachother, but also be malleable across encoding layers, hopefully allowing 
-identification between subtrees of variable size.
+cross-talk attention between the shape and node features of the problem's syntax tree. This allows the problem's 
+shape and information to not only speak between eachother, but also be malleable across encoding layers, 
+hopefully allowing identification between subtrees of variable size.
 
 
 ## Getting Started

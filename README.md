@@ -13,7 +13,7 @@ Authors:
 
 ## Introduction
 
-AxoLoTL is an attempt at encoding representations of learned, generalizable, logic through examples of entailment 
+AxoLoTL is an attempt at encoding representations of learned, generalizable logic through examples of entailment 
 between syntax trees. 
 
 Other works which try to train logical understanding into LLMs often use Bidirectional Transformer models on 

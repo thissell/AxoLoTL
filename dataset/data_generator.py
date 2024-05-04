@@ -71,7 +71,7 @@ def generate_dataset(max_len: int, var_num: int, amt: int, repl: int):
     return graphs, data
 
 def split_into(max_len, var_num, amt, repl, split):
-    global train_graphs, train_data, test_graphs, test_data, valid_graphs, valid_data, gener_graphs, gener_data
+    global train_graphs, train_data, test_graphs, test_data, valid_graphs, valid_data
 
     g, d = generate_dataset(max_len, var_num, amt, repl)
 
@@ -102,9 +102,6 @@ if __name__ == "__main__":
 
     valid_graphs = []
     valid_data = []
-
-    gener_graphs = []
-    gener_data = []
 
     split_into(max_len=4, var_num=0, amt=100,  repl=1, split=(0.8, 0.1))
     split_into(max_len=4, var_num=1, amt=200,  repl=1, split=(0.8, 0.1))

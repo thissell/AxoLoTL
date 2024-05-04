@@ -37,14 +37,19 @@ def get_entailment_statistics(data, graphs):
 
     print("percent of graphs which are labeled with entailment: " + str(cnt / len(graphs) * 100) + "%.")
 
-def draw_graph_sample():
-    train_graphs, label_dict = load_graphs("./dataset/generated/train_graphs.bin")
-    train_data = pd.read_csv("./dataset/generated/train_data.csv")
+def draw_graph_sample(N, split='gener'):
+    train_graphs, label_dict = load_graphs("./generated/" + split + "_graphs.bin")
+    train_data = pd.read_csv("./generated/" + split + "_data.csv")
 
     # print statistics
     get_node_statistics(train_graphs)
-    get_entailment_statistics(train_data)
+    get_entailment_statistics(train_data, train_graphs)
 
-    # draw random sample graph
-    chosen_g = random.choice(train_graphs)
-    draw_tree(chosen_g)
+    for _ in range(N):
+        # draw random sample graph
+        chosen_g = random.choice(train_graphs)
+
+        print(chosen_g.ndata['feat'])
+        draw_tree(chosen_g)
+
+draw_graph_sample(5, "test")
